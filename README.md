@@ -19,6 +19,7 @@ http://104.238.181.82/walletGenerator/create_user/
 
 
 method : POST 
+
 {
 
 	username : 'username',
@@ -45,6 +46,7 @@ return :
 http://104.238.181.82/walletGenerator/authenticate/
 
 method : POST
+
 {
 
 	username : 'username',
@@ -71,6 +73,7 @@ http://104.238.181.82/walletGenerator/add_data/
 add_data -> add the information * must be authenticated *
 
 method : POST 
+
 {
 
 	label : 'label',
@@ -134,13 +137,15 @@ http://104.238.181.82/walletGenerator/get_wallet/token/currency/label
 
 http://104.238.181.82/walletGenerator/get_wallet/077d2f2d63d9678f821ff45b028b04a62fe99be433216dda73dfc83f01f29c3a5f0b46921b126829df6eb58652e96636caf5b5f0ce678c1230e095186adb5559/btc/bitcoindonation
 
-[{
+{
+	
 	success: true,
 	data: {
 		address: "13gbpLjNJXvZkCMoKmiVxH2XCPoPjgrxum",
 		idx: "0"
 	}
-}]
+
+}
 
 
 -- at this time only btc (bitcoin) is allowed as currency
