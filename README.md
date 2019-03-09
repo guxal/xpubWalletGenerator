@@ -19,7 +19,7 @@ post :
 http://104.238.181.82/walletGenerator/create_user/
 
 
-{
+"create_user":{
 	username : 'username',
 	password : 'password',
 	email : 'email',
@@ -27,9 +27,7 @@ http://104.238.181.82/walletGenerator/create_user/
 }
 
 
-return : 
-
-{
+"return" : {
 	"success":true,
  	"data":{
  		"token":"yourtoken"
