@@ -1,6 +1,6 @@
 # HD Wallet Generator (HD-WG)
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+<!-- [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid) -->
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
@@ -55,8 +55,7 @@ let obj = {
     }
 }
 ``` 
-- remember save your token 
-- 
+
 
 ### [`POST`] add_data/
 ```javascript
@@ -75,8 +74,7 @@ let obj = {
     "message":"datos se registraron con exito"
 }
 ``` 
-- remember save your token 
-- 
+
 
 ### [`POST`] get_data/
 ```javascript
@@ -106,13 +104,28 @@ var path = "get_data/";
 	}
 }
 ``` 
-- remember save your token 
-- 
+- the idx is the index that leads in the generated wallets
 
+### TO GENERATE WALLET
 
+- does not need authentication only the user's token , currency and label
 
+### [`GET`] get_wallet/token/currency/label
 
+#### Example 
 
+http://104.238.181.82/walletGenerator/get_wallet/077d2f2d63d9678f821ff45b028b04a62fe99be433216dda73dfc83f01f29c3a5f0b46921b126829df6eb58652e96636caf5b5f0ce678c1230e095186adb5559/btc/bitcoindonation
+
+#### RETURN : 
+```javascript
+{
+    "success": true,
+    "data": {
+	    "address": "13gbpLjNJXvZkCMoKmiVxH2XCPoPjgrxum",
+	    "idx": 0
+    }
+}
+```
 
 License
 ----
