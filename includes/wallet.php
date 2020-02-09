@@ -1,14 +1,14 @@
 <?php
 /**
- * Este es un comentario de doc
- * php version 7.2.10
+ * Modulo Wallet
+ * php version 7.0.33
  
  * @category Components
  * @package  Slim
- * @author   your name <username@gmail.com>
+ * @author   guxal <jonathanacp93@gmail.com>
  * @license  https://licence.com GNU/GPLv3
  * @version  GIT: @1.0.0@
- * @link     https://yoursite.com
+ * @link     https://github.com
  */
 use BitWasp\Bitcoin\Address\PayToPubKeyHashAddress;
 use BitWasp\Bitcoin\Bitcoin;
@@ -25,7 +25,7 @@ require '../vendor/autoload.php';
  * @param string $currency ex: bitcoin.
  * @param string $network  mainnet or testnet.
  *
- * @return json
+ * @return string address or null.
  */
 function createWallet($idx, $xpub, $currency, $network)
 {
@@ -46,15 +46,9 @@ function createWallet($idx, $xpub, $currency, $network)
         $address = new PayToPubKeyHashAddress($publicKey->getPubKeyHash()); 
         $address = $address->getAddress();// . PHP_EOL ;
     
-        if ($address) {
-            $r = $address;
-        } else {
-            $r = null;
-        }
-        return $r;
+        return $address;
     } catch (Exception $e) {
-        echo "except";
-        echo $e->getMessage();
+        //  echo $e->getMessage();
         return null;
     }
 }
