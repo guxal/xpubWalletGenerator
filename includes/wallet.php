@@ -45,7 +45,7 @@ function createWallet($idx, $xpub, $currency, $network)
         $publicKey = $master->derivePath($path)->getPublicKey(); 
         $address = new PayToPubKeyHashAddress($publicKey->getPubKeyHash()); 
         $address = $address->getAddress();// . PHP_EOL ;
-    
+
         return $address;
     } catch (Exception $e) {
         //  echo $e->getMessage();
